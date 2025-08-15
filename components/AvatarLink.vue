@@ -37,7 +37,6 @@ const pros = defineProps({
   align-items: center;
   text-decoration: none;
   color: var(--color-text-inverse);
-  flex: 1;
   padding: 5px;
 }
 

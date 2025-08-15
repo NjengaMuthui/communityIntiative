@@ -1,0 +1,13 @@
+interface Contact {
+  label: string;
+  link: string;
+}
+
+interface ManagerDetails {
+  name: string;
+  role: string;
+  photoUrl?: string;
+  bio?: string;
+  contacts?: Contact[];
+}
+export { Contact, ManagerDetails };

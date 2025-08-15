@@ -13,9 +13,7 @@
     <List />
   </div>
 </template>
-
 <script setup lang="ts">
-import { computed } from "vue";
 const isAccent = computed(() => props.title === "MISSION");
 const isGreen = computed(() => props.title === "VISION");
 const isBlue = computed(() => props.title === "OBJECTIVES");

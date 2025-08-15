@@ -9,7 +9,7 @@
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/aboutus">About Us</a></li>
-        <li><a href="/work">Our Work </a></li>
+        <li><a href="/ourwork">Our Work </a></li>
         <li><a href="/events">Events</a></li>
         <li><a href="contactus">Contact Us</a></li>
         <li><a href="/shop">Shop</a></li>
@@ -19,7 +19,13 @@
     <header class="main-header" :class="{ white_bg: isScrolled }">
       <div class="logo">
         <a href="/">
-          <img :src="logo" alt="Child Community Logo" />
+          <img v-if="isScrolled" :src="logo" alt="Child Community Logo" />
+          <img
+            v-else
+            :src="LogoAlt"
+            alt="Child Community Logo"
+            class="logo-alt"
+          />
         </a>
       </div>
       <div class="flex-center">
@@ -28,7 +34,7 @@
             <ul>
               <li><a href="/">Home</a></li>
               <li><a href="/aboutus">About Us</a></li>
-              <li><a href="/work">Our Work </a></li>
+              <li><a href="/ourwork">Our Work </a></li>
               <li><a href="/events">Events</a></li>
               <li><a href="/contactus">Contact Us</a></li>
               <li><a href="/shop">Shop</a></li>
@@ -63,8 +69,9 @@
 </template>
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
-import logo from "@/assets/logormbg.png";
+import logo from "@/assets/mainlogo.png";
 import Footer from "@/components/Footer.vue";
+import LogoAlt from "@/assets/logomainalt.png";
 
 const showMenu = ref(false);
 const isScrolled = ref(false);
