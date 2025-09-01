@@ -29,7 +29,7 @@
         activities viable to the development of the people or community.
       </p>
 
-      <a href="/work" class="btn btn-nm">
+      <a href="/ourwork" class="btn btn-nm">
         <div class="hover"></div>
         <span>Learn More</span>
       </a>
