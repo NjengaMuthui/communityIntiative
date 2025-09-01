@@ -10,4 +10,8 @@ interface ManagerDetails {
   bio?: string;
   contacts?: Contact[];
 }
-export { Contact, ManagerDetails };
+export interface Payment {
+  accountNumber: string;
+  amount: number;
+}
+export { Contact, ManagerDetails, Payment };

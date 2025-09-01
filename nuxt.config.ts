@@ -3,5 +3,9 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   modules: ["@nuxt/fonts", "@nuxt/image"],
-  css: ["../assets/base.css"]
+  css: ["../assets/base.css", "vue-flux/style.css"],
+  ssr: true,
+  nitro: {
+    preset: "static"
+  }
 });

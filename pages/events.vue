@@ -4,7 +4,8 @@
     <InfoDual
       :images="images"
       title="Uganda Child Community Initiative Events"
-      info="We organize various events throughout the year to engage with the community, raise awareness, and support our initiatives. These events include fundraisers, community outreach programs, educational workshops, and cultural celebrations. Each event is designed to foster a sense of community, promote our mission, and provide opportunities for individuals to get involved and make a difference."
+      :info="infomation"
+      url="https://youtu.be/9m2bkkOkZSw?si=AIbwvs4Yt_Zi-ynu"
     />
   </div>
 </template>
@@ -30,6 +31,19 @@ const images = [
   Uganda7,
   Uganda8
 ];
+const infomation = ref<string>(
+  "We organize various events throughout " +
+    "the year to engage with the community, " +
+    "raise awareness, and support our " +
+    "initiatives. These events include " +
+    "fundraisers, community outreach " +
+    "programs, educational workshops, " +
+    "and cultural celebrations. Each " +
+    "event is designed to foster a sense " +
+    "of community, promote our mission, " +
+    "and provide opportunities for individuals " +
+    "to get involved and make a difference."
+);
 </script>
 <style scoped>
 .page-container {

@@ -12,6 +12,7 @@
       </article>
     </div>
   </section>
+  <Youtube v-if="isVideo" :url="props.url ?? ''" />
 </template>
 
 <script setup lang="ts">
@@ -33,8 +34,16 @@ const props = defineProps({
   isReversed: {
     type: Boolean,
     default: false
+  },
+  url: {
+    type: String,
+    required: false
   }
 });
+
+const isVideo =
+  props.url &&
+  (props.url.includes("youtube.com") || props.url.includes("youtu.be"));
 </script>
 
 <style scoped>
@@ -43,15 +52,8 @@ const props = defineProps({
   flex-direction: column;
 }
 .image-side {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  object-fit: cover;
-}
-.image-side img {
-  width: 90%;
-  object-fit: cover;
-  margin: 0 auto;
+  width: 100%;
+  margin-top: 20px;
 }
 .info-side {
   display: flex;

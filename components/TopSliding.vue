@@ -15,8 +15,8 @@
           <a href="/donate" class="btn">
             <span>Donate</span>
           </a>
-          <a href="/donate" class="btn btn-sec">
-            <span>Our Story</span>
+          <a href="/ourwork" class="btn btn-sec">
+            <span>Our Work</span>
           </a>
         </div>
 
