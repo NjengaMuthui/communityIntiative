@@ -1,7 +1,7 @@
 <template>
-  <a :href="`/${pros.name}`" class="app-container">
+  <a :href="`/ourwork#${pros.link}`" class="app-container">
     <div class="avatar">
-      <img src="@/assets/slide.jpg" alt="Logo" />
+      <img :src="image" alt="Logo" />
     </div>
     <div class="info-container">
       <h5 class="name">{{ pros.name }}</h5>
@@ -27,6 +27,14 @@ const pros = defineProps({
     type: String,
     default:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  link: {
+    type: String,
+    default: "/"
+  },
+  image: {
+    type: String,
+    required: true
   }
 });
 </script>
@@ -64,6 +72,10 @@ const pros = defineProps({
 
 .name {
   font-size: 1em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 .description {

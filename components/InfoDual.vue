@@ -1,7 +1,7 @@
 <template>
   <section class="info-dual" :class="{ info_reverse: props.isReversed }">
     <div class="image-side">
-      <img :src="props.image" :alt="props.title" />
+      <FluxComp :images="props.images" />
     </div>
     <div class="info-side">
       <IconsQuotes class="info-quotes" />
@@ -15,9 +15,11 @@
 </template>
 
 <script setup lang="ts">
+import FluxComp from "./FluxComp.vue";
+
 const props = defineProps({
-  image: {
-    type: String,
+  images: {
+    type: Array as () => string[],
     required: true
   },
   info: {
@@ -39,7 +41,6 @@ const props = defineProps({
 .info-dual {
   display: flex;
   flex-direction: column;
-  margin: 50px 0;
 }
 .image-side {
   display: flex;

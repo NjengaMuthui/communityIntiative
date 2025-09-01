@@ -21,9 +21,27 @@
         </div>
 
         <div class="division-button">
-          <AvatarLink />
-          <AvatarLink v-if="isTablet" />
-          <AvatarLink v-if="isDesktop" />
+          <AvatarLink
+            name="Going to the community to know"
+            description="Going is a very key component of engaging the community. The Lord Jesus Christ is presented as one figure who practiced GOING to the people strategy and it worked wonders."
+            :image="slide2"
+            link="going"
+          />
+          <AvatarLink
+            v-if="isTablet"
+            name="Asking for support by networking with others."
+            description="Partnerships must be forged since no organization can exist in isolation, nor be entirely self-sufficient."
+            :image="slide3"
+            link="support"
+          />
+          />
+          <AvatarLink
+            v-if="isDesktop"
+            name="Developing programs that are solution-oriented."
+            description="Programs must be developed to address the felt needs of the community. These programs must be solution-oriented."
+            :image="slide4"
+            link="programs"
+          />
         </div>
       </div>
     </div>

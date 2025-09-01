@@ -12,7 +12,6 @@
         <li><a href="/ourwork">Our Work </a></li>
         <li><a href="/events">Events</a></li>
         <li><a href="contactus">Contact Us</a></li>
-        <li><a href="/shop">Shop</a></li>
         <li><a href="/donate">Donate</a></li>
       </ul>
     </div>
@@ -37,7 +36,6 @@
               <li><a href="/ourwork">Our Work </a></li>
               <li><a href="/events">Events</a></li>
               <li><a href="/contactus">Contact Us</a></li>
-              <li><a href="/shop">Shop</a></li>
             </ul>
           </nav>
           <a href="/donate" class="btn">

@@ -7,10 +7,6 @@
       title="Our Work"
       class="mv-image"
     />
-    <header class="page-header">
-      <h1 class="main-title">{{ pageTitle }}</h1>
-      <p class="subtitle">{{ pageSubtitle }}</p>
-    </header>
 
     <!-- Media slots -->
     <section class="media-section">
@@ -28,7 +24,7 @@
       :key="idx"
       class="content-section"
     >
-      <h2 class="section-title">{{ section.title }}</h2>
+      <h2 :id="section.id" class="section-title">{{ section.title }}</h2>
       <div
         v-for="(paragraph, pidx) in section.paragraphs"
         :key="pidx"
@@ -55,20 +51,13 @@
 interface Section {
   title: string;
   paragraphs: string[];
-}
-
-interface Props {
-  pageTitle: string;
-  pageSubtitle?: string;
-  sections: Section[];
+  id: string;
 }
 import OurWork from "@/assets/ourwork.jpg";
 import Our1 from "@/assets/our1.jpg";
 import Our2 from "@/assets/our2.jpg";
 import Our3 from "@/assets/our3.jpg";
 import self from "@/assets/self.jpg";
-
-const props = defineProps<Props>();
 
 // Default pre-filled content
 const sections: Section[] = [
@@ -82,7 +71,8 @@ const sections: Section[] = [
       "Going is very key to CCI because when we go, we develop relationships with people that lead to openness of heart. Sharing problems becomes easier as familiarity grows.",
       "Ministry to the people is about people — not programs or activities. This is the number one factor as CCI seeks to penetrate the community to achieve our key objective: people.",
       "With the holistic agenda in mind, we must also note that while we focus on these age brackets, we will also develop leaders from outside in the initial stages, eventually focusing on developing them from within."
-    ]
+    ],
+    id: "going"
   },
   {
     title: "2. Asking for support by networking with others. [War chest]",
@@ -91,7 +81,8 @@ const sections: Section[] = [
       "Partnerships should extend beyond financial matters to include information and technology, physical resources and expertise, manpower, and personnel acquisition.",
       "The most pressing need in most organizations is the ability to finance activities that grow from programs. This requires: a drafted budget, funds from partners, and funds raised internally.",
       "Fundraising can be both formatted and random, coming in forms such as donations or monetary contributions."
-    ]
+    ],
+    id: "support"
   },
   {
     title: "3. Developing programs that are solution-oriented. [Path]",
@@ -106,7 +97,8 @@ const sections: Section[] = [
       "III. The iTalent Development — Identifying and developing talents/gifts through sports, theatre, craftsmanship, and other skills.",
       "IV. The iSupport Fund Raiser — Structured fundraising, budgeting, and financial policy development.",
       "V. The iOrphans Support and Care — Supporting total orphans, partial orphans, and vulnerable children through food, shelter, and education."
-    ]
+    ],
+    id: "programs"
   },
   {
     title: "Summary",
@@ -115,7 +107,8 @@ const sections: Section[] = [
       "The path is unpredictable but worth navigating; passion must be centered around people — the reason for God’s creation and Christ’s coming.",
       "God loves people more than anything else, enough to give His Son.",
       "CCN delights in raising godly young people who will positively influence their communities using the word of God as a guide."
-    ]
+    ],
+    id: "summary"
   }
 ];
 </script>
