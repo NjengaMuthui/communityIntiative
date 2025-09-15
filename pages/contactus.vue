@@ -7,10 +7,7 @@
       </div>
       <div class="contact-form">
         <h1>Send Us a Message</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
+        <p>Let us know how we can help you.</p>
         <div class="contact-info">
           <WavyLabelInput
             Type="text"
@@ -38,13 +35,12 @@
       <div class="contact-card">
         <IconsPhone class="icon" />
         <h2>Phone</h2>
-        <p class="highlight">Phone: +254-000-000-000</p>
-        <p class="highlight">Phone: +254-000-000-000</p>
+        <p class="highlight">Phone: +254117547100</p>
       </div>
       <div class="contact-card">
         <IconsMail class="icon" />
         <h2>EMail</h2>
-        <p class="highlight">Mail: childcommunityinitiative@gmail.com</p>
+        <p class="highlight">Mail: Childcommunity2020@gmail.com</p>
       </div>
       <div class="contact-card">
         <IconsLocation class="icon" />

@@ -15,7 +15,7 @@
 </template>
 
 <script setup lang="ts">
-import photoUrl from "@/assets/selfrm.jpg";
+import photoUrl from "@/assets/profile2.jpg";
 const name = ref("Sylvester Onyango Achola");
 const role = ref("C.E.0");
 const bio = ref(
@@ -28,7 +28,10 @@ const bio = ref(
     "commitment to holistic development."
 );
 const contacts = ref([
-  { label: "Linked In", link: "https://www.linkedin.com" },
-  { label: "Email", link: "https://github.com" }
+  {
+    label: "Youtube",
+    link: "https://youtube.com/@sylvesterachola1895?si=mfX9hCWqjTurwCVE"
+  },
+  { label: "Email", link: "Childcommunity2020@gmail.com" }
 ]);
 </script>

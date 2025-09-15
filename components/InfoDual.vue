@@ -8,11 +8,16 @@
       <article class="info">
         <div class="info-title">{{ props.title }}</div>
         <p class="info-p paragraph">{{ props.info }}</p>
+
+        <ul class="info-list">
+          <li v-for="(item, index) in props.list" :key="index">{{ item }}</li>
+        </ul>
         <IconsQuotes class="end" />
       </article>
     </div>
   </section>
-  <Youtube v-if="isVideo" :url="props.url ?? ''" />
+
+  <Youtube v-for="(video, index) in props.url" :key="index" :url="video" />
 </template>
 
 <script setup lang="ts">
@@ -36,14 +41,14 @@ const props = defineProps({
     default: false
   },
   url: {
-    type: String,
+    type: Array as () => string[],
+    required: false
+  },
+  list: {
+    type: Array as () => string[],
     required: false
   }
 });
-
-const isVideo =
-  props.url &&
-  (props.url.includes("youtube.com") || props.url.includes("youtu.be"));
 </script>
 
 <style scoped>
@@ -88,11 +93,16 @@ const isVideo =
   text-align: center;
 }
 .info-p {
-  text-align: center;
+  text-align: left;
   font-size: 1.2rem; /* Slightly larger text for readability */
   line-height: 1.8; /* Increased line height for better spacing */
   color: #555; /* Slightly lighter text for secondary content */
   margin-bottom: 15px;
+}
+.info-list {
+  list-style-type: disc; /* Bullet points */
+  padding-left: 20px; /* Indent for better readability */
+  margin-top: 10px; /* Match paragraph text color */
 }
 
 @media (min-width: 768px) {

@@ -5,7 +5,8 @@
       :images="images"
       title="Uganda Child Community Initiative Events"
       :info="infomation"
-      url="https://youtu.be/9m2bkkOkZSw?si=AIbwvs4Yt_Zi-ynu"
+      :url="videos"
+      :list="list"
     />
   </div>
 </template>
@@ -32,18 +33,31 @@ const images = [
   Uganda8
 ];
 const infomation = ref<string>(
-  "We organize various events throughout " +
-    "the year to engage with the community, " +
-    "raise awareness, and support our " +
-    "initiatives. These events include " +
-    "fundraisers, community outreach " +
-    "programs, educational workshops, " +
-    "and cultural celebrations. Each " +
-    "event is designed to foster a sense " +
-    "of community, promote our mission, " +
-    "and provide opportunities for individuals " +
-    "to get involved and make a difference."
+  "The team to Uganda this year was " +
+    "QUEST SOLDIERS. We were operating " +
+    "under the theme one more heart for God." +
+    " The purpose was to reach the people of Northern" +
+    " villages of Uganda with the gospel of God. " +
+    "During that one week we were there we were " +
+    "able to identify quite a good number of " +
+    "opportunities, including but not limited to;"
 );
+const videos = ref<string[]>([
+  "https://youtu.be/vetKQAEc0zQ?si=ZkRv43KiZ9bs9x-N",
+  "https://youtu.be/8GlT-LEtE5M?si=UqYgCMvsV09uZN_A",
+  "https://youtu.be/i4SdW1IRczA?si=38sffCQM5moQdwUO",
+  "https://youtu.be/Hzof_blBfM0?si=RjbM4H1Np7xSBdm-",
+  "https://youtu.be/9gekPKHILBI?si=bJFO1Z65C2MC9qIm",
+  "https://youtu.be/-3al3ZE348I?si=0-uN1PSYoErNAnsa",
+  "https://youtu.be/kwogG_-OwL4?si=Zf8t0eNC1r1oe-pl"
+]);
+const list = ref<string[]>([
+  "Sports evangelism.",
+  "Health issues.",
+  "Agricultural training.",
+  "Talent development.",
+  "Education"
+]);
 </script>
 <style scoped>
 .page-container {

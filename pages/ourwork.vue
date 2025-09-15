@@ -42,7 +42,7 @@
       </div>
     </section>
     <section class="media-section">
-      <Youtube url="https://www.youtube.com/watch?v=obSX5ndIKUY" />
+      <Youtube url="https://youtu.be/5zVQQSgW6Hs?si=Hi2xSH6YVWm3F2RB" />
     </section>
   </div>
 </template>
@@ -59,7 +59,6 @@ import Our2 from "@/assets/our2.jpg";
 import Our3 from "@/assets/our3.jpg";
 import self from "@/assets/self.jpg";
 
-// Default pre-filled content
 const sections: Section[] = [
   {
     title: "1. Going to the community to know. [People]",

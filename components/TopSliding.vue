@@ -34,7 +34,6 @@
             :image="slide3"
             link="support"
           />
-          />
           <AvatarLink
             v-if="isDesktop"
             name="Developing programs that are solution-oriented."
